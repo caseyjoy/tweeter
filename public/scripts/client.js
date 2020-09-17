@@ -68,7 +68,7 @@ function createTweetElement(tweet) {
 
 function renderTweets(tweets) {
   console.log("Rendering tweets")
-  $("tweets").empty();
+  $("#tweets").empty();
   for (let tweet of tweets) {
     console.log(tweet)
     $("#tweets").prepend(createTweetElement(tweet));
