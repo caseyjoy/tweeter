@@ -1,0 +1,31 @@
+#new-tweet textarea {
+  border: none;
+  border-bottom: 5px grey solid;
+  background-color: transparent;
+  width: 100%;
+  resize: none;
+  height: 20;
+  font-weight: bold;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#new-tweet {
+  width: 80%;
+}
+
+#new-tweet button {
+  border: none;
+  background-color:  #4056A1;
+  color: #ffffff;
+
+  padding: 5px 10px;
+
+}
+
+#tweet-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
