@@ -38,6 +38,7 @@
         <img id="profile-picture" src="/images/profile-hex.png">
         <div id="profile-name">
           <span class="bold" id="first-name">Your</span> 
+          &nbsp;
           <span id="last-name">Name</span>
         </div>
       </div>
@@ -48,7 +49,7 @@
     <main class="container">
       <section id="new-tweet">
         <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST">
+        <form action="/tweets/" method="POST" id="new-tweet-form">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div id="tweet-bottom-row">
@@ -58,22 +59,9 @@
         </form>
       </section>
       <section id="tweets">
-        <article class="tweet">
-          <header>
-            <div>
-              <img src="" class="user-icon">
-              <span class="tweet-name">John Smith</span>
-            </div>
-            <span class="tweet-username">@JohnSmith</span>
-          </header>
-          <div class="tweet-content">Is the world spinning... or am I?</div>
-          <footer>
-            <span class="tweeted-how-many-days-ago">10 Days ago</span>
-            <span class="tweet-buttons">⚐↻❤</span>
-          </footer>
-        </article>
 
-        <article class="tweet">
+
+        <!-- <article class="tweet">
           <header>
             <div>
               <img src="" class="user-icon">
@@ -86,7 +74,7 @@
             <span class="tweeted-how-many-days-ago">10 Days ago</span>
             <span class="tweet-buttons">⚐↻❤</span>
           </footer>
-        </article>
+        </article> -->
 
       </section>
       

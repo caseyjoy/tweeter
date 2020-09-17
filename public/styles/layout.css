@@ -14,9 +14,7 @@ html {
  * Global layout stuff
  */
 
-:root {
-  --nav-height: 100px;
-}
+
 
 body {
   color: #545149;
