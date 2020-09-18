@@ -12,4 +12,11 @@ nav {
 
 #nav-logo {
   font-family: 'Bungee', cursive;
+
+  display: flex;
+  align-items: center;
+}
+
+#nav-logo img {
+  margin-left: 15px;
 }

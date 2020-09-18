@@ -66,3 +66,16 @@
 .tweet:hover .tweet-username{
   visibility: visible;
 }
+
+.tweet-buttons {
+  color: #6abfce;
+  /* font-weight: 400; */
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 30px;
+}
+
+.tweet-button:hover {
+  color: #ffffff;
+  background-color: #adadad;
+  border-radius: 100%;
+}
