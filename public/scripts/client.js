@@ -100,6 +100,13 @@ function loadTweets() {
 }
 
 $(document).ready(() => {
+  $("#write-new-tweet a").on("click", function (event){
+    console.log("click");
+    event.preventDefault(); 
+    $("#tweet-text").focus();
+    $("#tweet-text").selectionStart = 0;
+  });
+
   $("form").on("submit", (event) => {
     event.preventDefault();
     const formData = $("form").serialize();
@@ -113,7 +120,7 @@ $(document).ready(() => {
     $(".warning").hide();
 
     if (textLength < 0){
-      $("#warning-long").show();
+      $("#warning-long").show(); //.css("display", "inline-block");
     }
     if (textLength == 140){
       $("#warning-short").show();

@@ -60,7 +60,9 @@
         <h2>Compose Tweet</h2>
         <form action="/tweets/" method="POST" id="new-tweet-form">
           <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" 
+                    maxlength="280"
+                    placeholder="What are you humming about?"></textarea>
           <div id="tweet-bottom-row">
             <button type="submit">Tweet</button>
             <div class="warning" id="warning-short">Your tweet needs at least one letter.</div>
