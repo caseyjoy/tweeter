@@ -58,8 +58,14 @@ function createTweetElement(tweet) {
   const createdAt = escape(tweet.created_at);
   const daysAgo = Math.round((Date.now() - createdAt) / 86400000);
   console.log("Days ago:", createdAt, daysAgo)
-  const printableDaysAgo = `${daysAgo} ${daysAgo == 1 ? "day" : "days"} ago`;
+  let printableDaysAgo = "";
 
+  if(daysAgo == 0){
+    printableDaysAgo = "Today";
+  }
+  else{
+    printableDaysAgo = `${daysAgo} ${daysAgo == 1 ? "day" : "days"} ago`;
+  }
   const newTweet =
     `<article class="tweet">
     <header>
