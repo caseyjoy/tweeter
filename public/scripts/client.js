@@ -108,12 +108,28 @@ $(document).ready(() => {
     console.log(formData)
 
     const textLength = 140 - $("#tweet-text").val().length;
-    if (textLength > 0) {
+    console.log("text:", textLength)
+
+    $(".warning").hide();
+
+    if (textLength < 0){
+      $("#warning-long").show();
+    }
+    if (textLength == 140){
+      $("#warning-short").show();
+    }
+    
+    if (textLength > 0 && textLength != 140) {
       $.post("/tweets", formData, () => {
         loadTweets();
         $("#tweet-text").val("");
       });
     }
+
+    $(".warning").on("click", function () {
+      $(this).hide();
+      console.log("hide")
+    })
 
 
   });

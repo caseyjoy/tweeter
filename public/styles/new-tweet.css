@@ -1,10 +1,16 @@
-#counter {
-  
-}
-
 .red {
   color: #d83333;
 }
+
+.warning {
+  display: none;
+  background-color: #d83333;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
+}
+
 
 @media screen and (min-width: 375px){
   #new-tweet {

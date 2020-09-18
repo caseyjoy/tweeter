@@ -10,7 +10,10 @@
   box-sizing: inherit;
 }
 
-
+*::selection {
+  color: #ffffff;
+  background-color: #6abfce;
+}
 
 
 @media screen and (min-width: 375px){

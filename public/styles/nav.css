@@ -1,3 +1,12 @@
+#write-new-tweet a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#write-new-tweet a:visited {
+  color: #ffffff;
+}
+
 @media screen and (min-width: 375px){
   nav {
     height: 100px;
