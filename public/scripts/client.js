@@ -46,7 +46,7 @@
 //   }
 // ]
 
-const escape =  function(str) {
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -55,13 +55,13 @@ const escape =  function(str) {
 function createTweetElement(tweet) {
   //console.log("AVATAR: ", $(tweet.user.avatars).text())
   //console.log(+$(tweet.user.avatars).text());
-  const createdAt =  escape(tweet.created_at);
-  const daysAgo = Math.round((Date.now() - createdAt) / 86400000); 
-  console.log("Days ago:",createdAt, daysAgo)
+  const createdAt = escape(tweet.created_at);
+  const daysAgo = Math.round((Date.now() - createdAt) / 86400000);
+  console.log("Days ago:", createdAt, daysAgo)
   const printableDaysAgo = `${daysAgo} ${daysAgo == 1 ? "day" : "days"} ago`;
 
-  const newTweet = 
-  `<article class="tweet">
+  const newTweet =
+    `<article class="tweet">
     <header>
       <div>
         <img src="${escape(tweet.user.avatars)}" class="user-icon">
@@ -92,11 +92,11 @@ function renderTweets(tweets) {
   }
 }
 
-function loadTweets (){
+function loadTweets() {
   $.get("http://localhost:8080/tweets", (data) => {
     console.log("logged tweets:", data);
     renderTweets(data);
-  }) 
+  })
 }
 
 $(document).ready(() => {
@@ -107,12 +107,15 @@ $(document).ready(() => {
 
     console.log(formData)
 
-    $.post("/tweets", formData, ()=>{
-      loadTweets();
-      $("#tweet-text").val("");
-    });
-   
-    
+    const textLength = 140 - $("#tweet-text").val().length;
+    if (textLength > 0) {
+      $.post("/tweets", formData, () => {
+        loadTweets();
+        $("#tweet-text").val("");
+      });
+    }
+
+
   });
 
   // renderTweets(tweetData);

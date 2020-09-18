@@ -1,31 +1,56 @@
-#new-tweet textarea {
-  border: none;
-  border-bottom: 5px grey solid;
-  background-color: transparent;
-  width: 100%;
-  resize: none;
-  height: 20;
-  font-weight: bold;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  padding: 10px;
+#counter {
+  
 }
 
-#new-tweet {
-  width: 80%;
+.red {
+  color: #d83333;
 }
 
-#new-tweet button {
-  border: none;
-  background-color:  #4056A1;
-  color: #ffffff;
+@media screen and (min-width: 375px){
+  #new-tweet {
+    width: 80%;
+  }
+  
+  #new-tweet textarea {
+    border: none;
+    border-bottom: 5px grey solid;
+    background-color: transparent;
+    width: 100%;
+    resize: none;
+    height: 20;
+    font-weight: bold;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  #new-tweet h2, #new-tweet button {
+    font-size: 20px;
+  }
 
-  padding: 5px 10px;
-
+  #new-tweet button {
+    border: none;
+    background-color:  #4056A1;
+    color: #ffffff;
+  
+    padding: 5px 10px;
+  
+  }
+  
+  #tweet-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Bungee', cursive;
+    align-items: center;
+  }
+  
 }
 
-#tweet-bottom-row {
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Bungee', cursive;
+@media screen and (min-width: 768px){
+  #new-tweet h2, #new-tweet button {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px){
 }
