@@ -57,7 +57,7 @@ function createTweetElement(tweet) {
   //console.log(+$(tweet.user.avatars).text());
   const createdAt = escape(tweet.created_at);
   const daysAgo = Math.round((Date.now() - createdAt) / 86400000);
-  console.log("Days ago:", createdAt, daysAgo)
+  // console.log("Days ago:", createdAt, daysAgo)
   let printableDaysAgo = "";
 
   if(daysAgo == 0){
@@ -93,21 +93,21 @@ function renderTweets(tweets) {
   console.log("Rendering tweets")
   $("#tweets").empty();
   for (let tweet of tweets) {
-    console.log(tweet)
+    // console.log(tweet)
     $("#tweets").prepend(createTweetElement(tweet));
   }
 }
 
 function loadTweets() {
   $.get("http://localhost:8080/tweets", (data) => {
-    console.log("logged tweets:", data);
+    // console.log("logged tweets:", data);
     renderTweets(data);
   })
 }
 
 $(document).ready(() => {
   $("#write-new-tweet a").on("click", function (event){
-    console.log("click");
+    // console.log("click");
     event.preventDefault(); 
     $("#tweet-text").focus();
     $("#tweet-text").selectionStart = 0;
@@ -116,12 +116,12 @@ $(document).ready(() => {
   $("form").on("submit", (event) => {
     event.preventDefault();
     const formData = $("form").serialize();
-    console.log(formData);
+    // console.log(formData);
 
     console.log(formData)
 
     const textLength = 140 - $("#tweet-text").val().length;
-    console.log("text:", textLength)
+    // console.log("text:", textLength)
 
     $(".warning").hide();
 
@@ -132,6 +132,11 @@ $(document).ready(() => {
       $("#warning-short").show();
     }
     
+    
+    // const userName = $(`user="@Casey"`).serialize();
+    // const toSend = formData+";"+userName;
+    console.log("to send:",formData);
+
     if (textLength > 0 && textLength != 140) {
       $.post("/tweets", formData, () => {
         loadTweets();
@@ -141,7 +146,7 @@ $(document).ready(() => {
 
     $(".warning").on("click", function () {
       $(this).hide();
-      console.log("hide")
+      // console.log("hide")
     })
 
 

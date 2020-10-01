@@ -8,12 +8,14 @@
   color: white;
   padding: 10px;
   margin: 10px;
-  font-size: 20px;
-  margin: 0;
 }
 
 
 @media screen and (min-width: 375px){
+  .warning {
+    font-size: 12px;
+  }
+
   #new-tweet {
     width: 80%;
   }
@@ -54,6 +56,10 @@
 }
 
 @media screen and (min-width: 768px){
+  .warning {
+    font-size: 25px;
+  }
+  
   #new-tweet h2, #new-tweet button {
     font-size: 30px;
   }
