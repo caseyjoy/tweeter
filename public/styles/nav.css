@@ -25,7 +25,7 @@
   margin-left: 15px;
 }
 
-nav  {
+nav {
   min-width: 210px; /* for very small devices */
   width: 100vw;
   background-color: #4056a1;
@@ -41,8 +41,6 @@ nav  {
   justify-content: space-between;
   align-items: center;
 }
-
-
 
 /* phone screens */
 @media screen and (min-width: 375px) {

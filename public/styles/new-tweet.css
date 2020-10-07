@@ -29,13 +29,14 @@
   padding: 10px;
 }
 
-#new-tweet h2, #new-tweet button {
+#new-tweet h2,
+#new-tweet button {
   font-size: 20px;
 }
 
 #new-tweet button {
   border: none;
-  background-color:  #4056A1;
+  background-color: #4056a1;
   color: #ffffff;
   padding: 5px 10px;
 }
@@ -47,7 +48,7 @@
 #tweet-bottom-row {
   display: flex;
   justify-content: space-between;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   align-items: center;
 }
 
@@ -71,14 +72,12 @@
   .warning {
     font-size: 25px;
   }
-  
-  #new-tweet h2, #new-tweet button {
+
+  #new-tweet h2,
+  #new-tweet button {
     font-size: 30px;
   }
 }
 /* desktop screens */
 @media screen and (min-width: 1024px) {
-  #new-tweet {
-
-  }
 }

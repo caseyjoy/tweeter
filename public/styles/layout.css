@@ -24,7 +24,7 @@ html {
 /* default styling */
 body {
   min-width: 210px; /* for very small devices */
-  width:100%;
+  width: 100%;
   overflow-x: hidden;
   margin: 0;
   color: #545149;
@@ -42,7 +42,7 @@ main > div {
 }
 
 main {
-  width:100%;
+  width: 100%;
 }
 
 .bold {
@@ -67,8 +67,6 @@ main {
   body {
     font-size: 30px;
   }
-
-
 }
 /* desktop screens */
 @media screen and (min-width: 1024px) {

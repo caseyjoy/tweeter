@@ -66,7 +66,7 @@ $(document).ready(() => {
 
   $("form").on("submit", (event) => {
     event.preventDefault();
-    const formData = $("form").serialize();
+    const formData = $("form").serialize()+ "&" + $.param({user: {name: "Casey Joy", handle:"@casey", avatars: "http://localhost:8080/images/me_doodle.png"}});
     const textLength = 140 - $("#tweet-text").val().length;
 
     console.log("to send:", formData);

@@ -104,9 +104,17 @@
   .tweeted-how-many-days-ago {
     font-size: 17px;
   }
+
+  .tweet {
+    padding: 10px;
+  }
 }
 /* tablet screens */
 @media screen and (min-width: 768px) {
+  .tweet {
+    padding: 20px;
+  }
+
   .tweet-buttons {
     font-size: 40px;
   }
@@ -120,4 +128,7 @@
 }
 /* desktop screens */
 @media screen and (min-width: 1024px) {
+  .tweet {
+    padding: 24px;
+  }
 }
