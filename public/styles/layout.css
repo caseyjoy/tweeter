@@ -3,10 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- html {
+html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,59 +17,70 @@
   background-color: #6abfce;
 }
 
-
 .hidden {
   display: none;
 }
 
-@media screen and (min-width: 375px){
-  /*
-   * Global layout stuff
-   */
+/* default styling */
+body {
+  min-width: 210px; /* for very small devices */
+  width:100%;
+  overflow-x: hidden;
+  margin: 0;
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-
-  body {
-    color: #545149;
-    background-color: #f4f1ec;
-    /*  */
-    font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* font-size: 20px; */
-    /* width: 100vw; */
-  }
+main {
+  width:100%;
+}
 
 .bold {
   font-weight: 700;
 }
 
-/*
-  * Additional CSS can be defined below or in other CSS files, as per instructions
-  */
-
-  main {
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100%;
-height: 500px;
-  }
-}
-
 @media print {
   /* #header-image {
-display: none;
-} */
+  display: none;
+  } */
 }
 
-
-@media screen and (min-width: 768px){
+/* phone screens */
+@media screen and (min-width: 375px) {
+  main {
+    position: relative;
+    top: 100px;
+  }
+}
+/* tablet screens */
+@media screen and (min-width: 768px) {
   body {
     font-size: 30px;
   }
-}
 
-@media screen and (min-width: 1024px){
+
+}
+/* desktop screens */
+@media screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  main > div {
+    width: 80%;
+  }
 }

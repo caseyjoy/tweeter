@@ -1,98 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
-    <meta name="viewport" content="width=device-width" />
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      type="text/css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
 
-    <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/profile.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
   </head>
 
   <body>
-    <header>
-      <!-- Top nav bar (fixed) -->
-      <nav>
-        <span id="nav-logo">
+    <nav>
+      <span id="nav-logo">
+        <div>
           tweeter
-          <img src="./images/logo.png" height="40px">
-        </span>
-        <span id="write-new-tweet">
-          <a href="#profile">
-            <span class="bold">Write</span> a new tweet
-          </a>
-        </span>
-      </nav>
-      <div id="profile">
-        <img id="profile-picture" src="/images/me_doodle.png">
+          <img src="./images/logo.png" height="40px" />
+        </div>
+      </span>
+      <span id="write-new-tweet">
+        <a href="#profile"> <span class="bold">Write</span> a new tweet </a>
+      </span>
+    </nav>
+
+    <main>
+      <section id="profile">
+        <img id="profile-picture" src="/images/me_doodle.png" />
         <div id="profile-name">
-          <span class="bold" id="first-name">Casey</span> 
-          &nbsp;
+          <span class="bold" id="first-name">Casey</span>
           <span id="last-name">Joy</span>
         </div>
-      </div>
-
-    </header>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section id="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets/" method="POST" id="new-tweet-form">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <input name="user" value="Casey Joy" class="hidden">
-          <textarea name="text" id="tweet-text" 
-                    maxlength="280"
-                    placeholder="What are you humming about?"></textarea>
-          <div id="tweet-bottom-row">
-            <button type="submit">Tweet</button>
-            <div class="warning" id="warning-short">Your tweet needs at least one letter.</div>
-            <div class="warning" id="warning-long">Your tweet is too long.</div>
-            <output id="counter" name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
       </section>
-      <section id="tweets">
 
-
-        <!-- <article class="tweet">
-          <header>
-            <div>
-              <img src="" class="user-icon">
-              <span class="tweet-name">John Smith</span>
+      <div>
+        <section id="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form action="/tweets/" method="POST" id="new-tweet-form">
+            <input name="user" value="Casey Joy" class="hidden" />
+            <textarea
+              name="text"
+              id="tweet-text"
+              maxlength="280"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div id="tweet-bottom-row">
+              <button disabled type="submit">Tweet</button>
+              <!-- <div class="warning" id="warning-long">Tweets need to be less than 140 characters.</div> -->
+              <output
+                id="counter"
+                name="counter"
+                class="counter"
+                for="tweet-text"
+                >140</output
+              >
             </div>
-            <span class="tweet-username">@JohnSmith</span>
-          </header>
-          <div class="tweet-content">Is the world spinning... or am I?</div>
-          <footer>
-            <span class="tweeted-how-many-days-ago">10 Days ago</span>
-            <span class="tweet-buttons">⚐↻❤</span>
-          </footer>
-        </article> -->
-
-      </section>
-      
+          </form>
+        </section>
+        <section id="tweets"></section>
+      </div>
     </main>
   </body>
-
 </html>

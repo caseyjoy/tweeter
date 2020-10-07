@@ -1,0 +1,25 @@
+/* default styling */
+#tweets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+/**/
+@media print {
+}
+
+/* phone screens */
+@media screen and (min-width: 375px) {
+}
+/* tablet screens */
+@media screen and (min-width: 768px) {
+}
+/* desktop screens */
+@media screen and (min-width: 1024px) {
+  #tweets {
+  }
+}

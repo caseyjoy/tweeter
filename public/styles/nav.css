@@ -1,3 +1,11 @@
+/*print styling*/
+@media print {
+  nav {
+    display: none;
+  }
+}
+
+/* default styling */
 #write-new-tweet a {
   color: #ffffff;
   text-decoration: none;
@@ -7,46 +15,60 @@
   color: #ffffff;
 }
 
-@media screen and (min-width: 375px){
+#nav-logo {
+  font-family: "Bungee", cursive;
+  display: flex;
+  align-items: center;
+}
+
+#nav-logo img {
+  margin-left: 15px;
+}
+
+nav  {
+  min-width: 210px; /* for very small devices */
+  width: 100vw;
+  background-color: #4056a1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+#nav-logo div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* phone screens */
+@media screen and (min-width: 375px) {
   nav {
     height: 100px;
-    width: 100vw;
-    background-color: #4056A1;
-    color: #FFFFFF;
     padding: 1.5em;
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     top: 0;
-    align-items: center;
+    left: 0;
     font-size: 20px;
-  }
-
-  #nav-logo {
-    font-family: 'Bungee', cursive;
-    display: flex;
-    align-items: center;
-  }
-
-  #nav-logo img {
-    margin-left: 15px;
+    z-index: 1;
   }
 
   #write-new-tweet {
     font-size: 15px;
   }
 }
-
-
-@media screen and (min-width: 768px){
-  nav {
-    font-size: 30px;
-  }
-  
+/* tablet screens */
+@media screen and (min-width: 768px) {
   #write-new-tweet {
-    font-size: 30px;
+    font-size: 20px;
   }
 }
-
-@media screen and (min-width: 1024px){
+/* desktop screens */
+@media screen and (min-width: 1024px) {
+  #write-new-tweet {
+    font-size: 24px;
+  }
 }
