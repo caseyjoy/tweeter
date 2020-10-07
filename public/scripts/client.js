@@ -83,18 +83,20 @@ $(document).ready(() => {
     });
   });
 
-  $("#top-button").on("click", (e) =>{
+  $("#top-button").on("click", () =>{
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   })
 
-  $(window).scroll(function (w) {
-    if ($(window).scrollTop() != 0){
-      $("#top-button").show();
+  $(window).scroll(function () {
+    if ($(window).scrollTop() == 0){
+      
+      $("#top-button").hide();
+      $("#write-new-tweet").hide();
     }
     else {
-      $("#top-button").hide();
+      $("#top-button").show();
+      $("#write-new-tweet").show();
     }
-
 });
 
 

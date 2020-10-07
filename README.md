@@ -1,10 +1,11 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a project I worked on during a Lighthouse Labs course. (<https://github.com/lighthouse-labs/tweeter>)
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This repository is a forked copy of the code for the project, it uses CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB.
 
-## Getting Started
+## Running this
+If you want to run this modified version:
 
 1. Fork this repository, then clone your fork of this repository.
 2. Install dependencies using the `npm install` command.
