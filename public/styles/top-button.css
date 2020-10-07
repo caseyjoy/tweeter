@@ -1,0 +1,36 @@
+#top-button {
+  display: none;
+  position: fixed;
+  border: 0;
+  background-color: #4056a1;
+  color: white;
+  border-radius: 10px;
+ 
+}
+
+/**/
+@media print {
+  display: none;
+}
+
+/* phone screens */
+@media screen and (min-width: 375px) {
+  #top-button {
+    bottom: 0;
+    right: 0;
+    padding: 10px 5px;
+  }
+}
+/* tablet screens */
+@media screen and (min-width: 768px) {
+  #top-button {
+    padding: 10px;
+  }
+}
+/* desktop screens */
+@media screen and (min-width: 1024px) {
+  #top-button {
+    bottom: 25px;
+    right: 5px;
+  }
+}

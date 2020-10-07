@@ -83,5 +83,22 @@ $(document).ready(() => {
     });
   });
 
+  $("#top-button").on("click", (e) =>{
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+  })
+
+  $(window).scroll(function (w) {
+    if ($(window).scrollTop() != 0){
+      $("#top-button").show();
+    }
+    else {
+      $("#top-button").hide();
+    }
+
+});
+
+
+  
+
   loadTweets();
 });
