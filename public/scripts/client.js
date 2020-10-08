@@ -75,6 +75,7 @@ $(document).ready(() => {
       $.post("/tweets", formData, () => {
         loadTweets();
         $("#tweet-text").val("");
+        $("#counter").val("140");
       });
     }
 
