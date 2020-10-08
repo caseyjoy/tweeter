@@ -6,15 +6,6 @@
 }
 
 /* default styling */
-#write-new-tweet a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-#write-new-tweet a:visited {
-  color: #ffffff;
-}
-
 #nav-logo {
   font-family: "Bungee", cursive;
   display: flex;
@@ -42,6 +33,22 @@ nav {
   align-items: center;
 }
 
+#write-new-tweet a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#write-new-tweet a:visited {
+  color: #ffffff;
+}
+
+#write-new-tweet {
+/*   display: none; */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 250ms linear;
+}
+
 /* phone screens */
 @media screen and (min-width: 375px) {
   nav {
@@ -56,7 +63,6 @@ nav {
 
   #write-new-tweet {
     font-size: 15px;
-    display: none;
   }
 }
 /* tablet screens */

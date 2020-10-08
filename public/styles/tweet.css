@@ -7,6 +7,11 @@
   padding: 5px;
 }
 
+.user-icon {
+  width: 50px;
+  margin-right: 10px;
+}
+
 .tweet header {
   margin: 0;
   width: 100%;
@@ -77,6 +82,24 @@
 
 /**/
 @media print {
+  .tweet-button {
+    display: none;
+  }
+
+  .tweet header,
+  .tweet header div {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  article.tweet {
+    padding: 10px;
+    page-break-after: always;
+  }
+
+  .tweet:hover {
+    box-shadow: 5px 5px #000000;
+  }
 }
 
 /* phone screens */
