@@ -2,7 +2,7 @@
 
 Tweeter is a project I worked on during a Lighthouse Labs course. (<https://github.com/lighthouse-labs/tweeter>)
 
-This repository is a forked copy of the code for the project, it uses CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB.
+This repository is a forked copy of the code for the project, it uses CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
 
 ## Screenshots
 !["Screenshot of tweeter, adding a tweet"](/docs/screenshot1.png)
