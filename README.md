@@ -7,6 +7,7 @@ This repository is a forked copy of the code for the project, it uses CSS, JS, j
 ## Screenshots
 !["Screenshot of tweeter, adding a tweet"](/docs/screenshot1.png)
 !["Screenshot of tweeter, added tweet, adding too long a tweet"](/docs/screenshot2.png)
+!["Screenshot of tweeter, hidden tweet editor"](/docs/screenshot3.png)
 
 ## Running this
 If you want to run this modified version:
