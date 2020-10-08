@@ -4,6 +4,10 @@ Tweeter is a project I worked on during a Lighthouse Labs course. (<https://gith
 
 This repository is a forked copy of the code for the project, it uses CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB.
 
+## Screenshots
+!["Desktop size screenshot of Tweeter"](/docs/screenshot.png)
+!["Smaller size screenshot of Tweeter"](/docs/screenshot2.png)
+
 ## Running this
 If you want to run this modified version:
 
