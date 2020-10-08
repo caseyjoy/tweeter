@@ -14,7 +14,17 @@
 #new-tweet {
   margin-bottom: 10px;
   width: 90%;
+  height: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 250ms linear, visibility 0ms linear;
 }
+
+  /* annoyingly, with 0ms visibility transition it can grab focus, but also snaps shut
+    with longer transition is doesn't snap shut, but stops grabbing focus. 
+    So I'll have to find a way around that later. */
+
+
 
 #new-tweet textarea {
   border: none;

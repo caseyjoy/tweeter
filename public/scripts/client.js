@@ -60,13 +60,33 @@ function loadTweets() {
 $(document).ready(() => {
   $("#write-new-tweet a").on("click", function (e) {
     e.preventDefault();
-    $("#tweet-text").focus();
-    $("#tweet-text").selectionStart = 0;
+    if ($("#new-tweet").css("visibility") === "visible") {
+      $("#new-tweet")
+        .css("visibility", "hidden")
+        .css("opacity", "0")
+        .css("height", "0px");
+    } else {
+      $("#new-tweet")
+        .css("visibility", "visible")
+        .css("opacity", "1")
+        .css("height", "auto");
+      $("#tweet-text").focus();
+      $("#tweet-text").selectionStart = 0;
+    }
   });
 
   $("form").on("submit", (event) => {
     event.preventDefault();
-    const formData = $("form").serialize()+ "&" + $.param({user: {name: "Casey Joy", handle:"@casey", avatars: "http://localhost:8080/images/me_doodle.png"}});
+    const formData =
+      $("form").serialize() +
+      "&" +
+      $.param({
+        user: {
+          name: "Casey Joy",
+          handle: "@casey",
+          avatars: "http://localhost:8080/images/me_doodle.png",
+        },
+      });
     const textLength = 140 - $("#tweet-text").val().length;
 
     console.log("to send:", formData);
@@ -84,29 +104,20 @@ $(document).ready(() => {
     });
   });
 
-  $("#top-button").on("click", (e) =>{
+  $("#top-button").on("click", (e) => {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 'fast');
-  })
+    $("html, body").animate({ scrollTop: 0 }, "fast");
+  });
 
   $(window).scroll(function () {
-    if ($(window).scrollTop() == 0){
+    if ($(window).scrollTop() == 0) {
       $("#top-button").css("visibility", "hidden");
       $("#top-button").css("opacity", "0");
-      $("#write-new-tweet").css("visibility", "hidden");
-      $("#write-new-tweet").css("opacity", "0");
-    }
-    else {
+    } else {
       $("#top-button").css("visibility", "visible");
       $("#top-button").css("opacity", "1");
-      $("#write-new-tweet").css("visibility", "visible");
-      $("#write-new-tweet").css("opacity", "1");
-    
     }
-});
-
-
-  
+  });
 
   loadTweets();
 });

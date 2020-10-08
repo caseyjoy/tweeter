@@ -42,11 +42,8 @@ nav {
   color: #ffffff;
 }
 
-#write-new-tweet {
-/*   display: none; */
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 250ms linear, visibility 250ms linear;
+#write-new-tweet a:hover{
+  color: #f0eebc;
 }
 
 /* phone screens */
