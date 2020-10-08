@@ -4,7 +4,7 @@
   background-color: #4056a1;
   color: white;
   border-radius: 10px;
- 
+
   opacity: 0;
   visibility: hidden;
   transition: opacity 250ms linear, visibility 250ms linear;
@@ -12,7 +12,9 @@
 
 /**/
 @media print {
-  display: none;
+  #top-button {
+    display: none;
+  }
 }
 
 /* phone screens */

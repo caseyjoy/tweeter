@@ -91,12 +91,10 @@ $(document).ready(() => {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() == 0){
-      
       $("#top-button").css("visibility", "hidden");
       $("#top-button").css("opacity", "0");
       $("#write-new-tweet").css("visibility", "hidden");
       $("#write-new-tweet").css("opacity", "0");
- 
     }
     else {
       $("#top-button").css("visibility", "visible");
